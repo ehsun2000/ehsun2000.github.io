@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charles Zheng</title>
+  <meta name="description" content="Charles Zheng 的個人首頁">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      flex: 1;
+      width: 100%;
+    }
+    header { text-align: center; margin-bottom: 3rem; }
+    .avatar {
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #58a6ff, #a371f7);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; font-weight: 700;
+      margin: 0 auto 1.25rem;
+      color: #fff;
+    }
+    h1 { font-size: 2rem; margin-bottom: .5rem; }
+    .tagline { color: var(--muted); font-size: 1.05rem; }
+    .links {
+      display: grid;
+      gap: .85rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 520px) {
+      .links { grid-template-columns: 1fr 1fr; }
+    }
+    a.card {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color .15s, transform .15s;
+    }
+    a.card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    a.card .title { font-weight: 600; margin-bottom: .15rem; }
+    a.card .desc { color: var(--muted); font-size: .9rem; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">C</div>
+      <h1>Charles Zheng</h1>
+      <p class="tagline">Software Engineer @ imSoft</p>
+    </header>
+
+    <section class="links">
+      <a class="card" href="https://github.com/ehsun2000" target="_blank" rel="noopener">
+        <div class="title">GitHub</div>
+        <div class="desc">github.com/ehsun2000</div>
+      </a>
+      <a class="card" href="mailto:charles.zheng@imsoft.com.tw">
+        <div class="title">Email</div>
+        <div class="desc">charles.zheng@imsoft.com.tw</div>
+      </a>
+    </section>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Charles Zheng · Built with
+    <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
